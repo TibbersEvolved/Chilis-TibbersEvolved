@@ -1,5 +1,6 @@
 package Chilis.com.demo.Controller;
 
+import Chilis.com.demo.Dto.MessageDto;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,11 +14,13 @@ import java.util.List;
 public class Controller {
 
     @GetMapping("/fetch")
-    public String findAll(){
+    public MessageDto findAll(){
+        MessageDto dto = new MessageDto("This is the endpoint");
 
-        List<String> tempList = new ArrayList<>();
-
-        tempList.add("This IS THE ENDPOINT");
-        return "Hey Nav";
+//        List<String> tempList = new ArrayList<>();
+//
+//        tempList.add("This IS THE ENDPOINT");
+        return dto;
     }
+
 }
