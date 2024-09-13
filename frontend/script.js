@@ -9,5 +9,8 @@ fetchButton.onClick = () => {
 fetchButton.addEventListener("click", function (e) {
   fetch(path + "/fetch")
   .then((response) => response.json())
-  .then((data) => alert({data}));
+  .then((data) => alert({data})); {
+    var json = JSON.parse(data);
+    alert(json.message)
+  }
 })
