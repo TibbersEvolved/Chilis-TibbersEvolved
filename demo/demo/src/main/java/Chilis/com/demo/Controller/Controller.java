@@ -8,14 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @CrossOrigin(origins = "*")
-@RequestMapping("/fetch")
 @org.springframework.stereotype.Controller
 public class Controller {
-    public Controller() {
 
-    }
-
-    @GetMapping
+    @GetMapping("/fetch")
     public List<String> findAll(){
 
         List<String> tempList = new ArrayList<>();
