@@ -12,4 +12,3 @@ fetchButton.addEventListener("click", function (e) {
   .then((response) => response.json())
   .then((data) => alert({data}));
 })
-alert("this is amazing");
